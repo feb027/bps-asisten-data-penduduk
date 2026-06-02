@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+  <defs>
+    <style>
+      .bg{fill:#f8fbff}.title{font:700 42px Arial, sans-serif;fill:#0f3b7a}.subtitle{font:600 22px Arial,sans-serif;fill:#255b9a}.box{fill:#fff;stroke:#1f5fae;stroke-width:3;rx:18}.green{stroke:#16875f}.orange{stroke:#d97706}.red{stroke:#dc2626}.muted{fill:#eef6ff;stroke:#7aa7df;stroke-width:2;rx:14}.text{font:700 24px Arial,sans-serif;fill:#10233f}.small{font:500 17px Arial,sans-serif;fill:#334155}.tiny{font:500 15px Arial,sans-serif;fill:#475569}.arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:8 8}.section{font:700 20px Arial,sans-serif;fill:#0f3b7a}.pill{fill:#0f3b7a}.pilltext{font:700 18px Arial,sans-serif;fill:white}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1600" height="1050"/>
+  <text class="title" x="800" y="58" text-anchor="middle">ALUR SISTEM ASISTEN DATA PENDUDUK</text>
+  <text class="subtitle" x="800" y="92" text-anchor="middle">BPS Kabupaten Tasikmalaya — Rancangan Awal</text>
+
+  <rect class="pill" x="555" y="112" width="490" height="40" rx="20"/><text class="pilltext" x="800" y="138" text-anchor="middle">Raw Data → Database → Pencarian → Cross-check → Chatbot</text>
+
+  <!-- Security panel -->
+  <rect class="muted" x="55" y="245" width="275" height="510"/>
+  <text class="section" x="192" y="285" text-anchor="middle">Kontrol Keamanan</text>
+  <rect class="box" x="82" y="325" width="220" height="92"/><text class="text" x="192" y="360" text-anchor="middle">Role Access</text><text class="small" x="192" y="387" text-anchor="middle">akses sesuai kewenangan</text>
+  <rect class="box" x="82" y="450" width="220" height="92"/><text class="text" x="192" y="485" text-anchor="middle">Audit Log</text><text class="small" x="192" y="512" text-anchor="middle">catat semua pencarian</text>
+  <rect class="box red" x="82" y="575" width="220" height="92"/><text class="text" x="192" y="610" text-anchor="middle">Data Sensitif</text><text class="small" x="192" y="637" text-anchor="middle">tidak masuk GitHub</text>
+  <rect class="box orange" x="82" y="700" width="220" height="32"/><text class="tiny" x="192" y="721" text-anchor="middle">gunakan data dummy untuk dev</text>
+
+  <!-- Main flow boxes -->
+  <rect class="box" x="510" y="185" width="520" height="70"/><text class="text" x="770" y="215" text-anchor="middle">1. Petugas BPS</text><text class="small" x="770" y="240" text-anchor="middle">pengguna internal yang berwenang</text>
+  <line class="arrow" x1="770" y1="255" x2="770" y2="290"/>
+  <rect class="box" x="510" y="290" width="520" height="70"/><text class="text" x="770" y="320" text-anchor="middle">2. Login / Verifikasi Akses</text><text class="small" x="770" y="345" text-anchor="middle">akun, role, dan izin pencarian</text>
+  <line class="arrow" x1="770" y1="360" x2="770" y2="395"/>
+  <rect class="box orange" x="510" y="395" width="520" height="80"/><text class="text" x="770" y="426" text-anchor="middle">3. Input Data Mentah</text><text class="small" x="770" y="452" text-anchor="middle">Excel / CSV / file kegiatan kantor</text>
+  <line class="arrow" x1="770" y1="475" x2="770" y2="510"/>
+  <rect class="box orange" x="510" y="510" width="520" height="80"/><text class="text" x="770" y="541" text-anchor="middle">4. Validasi &amp; Normalisasi</text><text class="small" x="770" y="567" text-anchor="middle">cek kolom, duplikat, format, wilayah</text>
+  <line class="arrow" x1="770" y1="590" x2="770" y2="625"/>
+  <rect class="box green" x="510" y="625" width="520" height="80"/><text class="text" x="770" y="656" text-anchor="middle">5. Database Terstruktur</text><text class="small" x="770" y="682" text-anchor="middle">data rapi, terintegrasi, siap di-query</text>
+  <line class="arrow" x1="770" y1="705" x2="770" y2="740"/>
+  <rect class="box" x="510" y="740" width="520" height="80"/><text class="text" x="770" y="771" text-anchor="middle">6. Dashboard Pencarian</text><text class="small" x="770" y="797" text-anchor="middle">NIK / nama / alamat / wilayah</text>
+  <line class="arrow" x1="770" y1="820" x2="770" y2="855"/>
+  <rect class="box" x="510" y="855" width="520" height="80"/><text class="text" x="770" y="886" text-anchor="middle">7. Cross-check Data Pembanding</text><text class="small" x="770" y="912" text-anchor="middle">cocok, tidak cocok, data kurang</text>
+  <line class="arrow" x1="770" y1="935" x2="770" y2="972"/>
+  <rect class="box green" x="510" y="972" width="520" height="55"/><text class="text" x="770" y="1007" text-anchor="middle">8. Hasil Validasi / Laporan</text>
+
+  <!-- WhatsApp panel -->
+  <rect class="muted green" x="1160" y="245" width="330" height="510"/>
+  <text class="section" x="1325" y="285" text-anchor="middle">WhatsApp Chatbot</text>
+  <rect class="box green" x="1195" y="330" width="260" height="85"/><text class="text" x="1325" y="363" text-anchor="middle">Pesan Petugas</text><text class="small" x="1325" y="390" text-anchor="middle">contoh: CEK NIK ...</text>
+  <line class="arrow" x1="1325" y1="415" x2="1325" y2="450"/>
+  <rect class="box green" x="1195" y="450" width="260" height="85"/><text class="text" x="1325" y="483" text-anchor="middle">Verifikasi Nomor</text><text class="small" x="1325" y="510" text-anchor="middle">whitelist petugas</text>
+  <line class="arrow" x1="1325" y1="535" x2="1325" y2="570"/>
+  <rect class="box green" x="1195" y="570" width="260" height="85"/><text class="text" x="1325" y="603" text-anchor="middle">Query Aman ke API</text><text class="small" x="1325" y="630" text-anchor="middle">bukan akses DB langsung</text>
+  <line class="arrow" x1="1325" y1="655" x2="1325" y2="690"/>
+  <rect class="box green" x="1195" y="690" width="260" height="85"/><text class="text" x="1325" y="723" text-anchor="middle">Balasan Ringkas</text><text class="small" x="1325" y="750" text-anchor="middle">hasil sesuai izin akses</text>
+
+  <line class="arrow dash" x1="1030" y1="665" x2="1160" y2="612"/>
+  <line class="arrow dash" x1="1195" y1="612" x2="1030" y2="665"/>
+
+  <text class="tiny" x="800" y="1042" text-anchor="middle">Catatan: flowchart ini asumsi awal. Finalisasi perlu konfirmasi sumber data, izin akses, dan output magang ke pembimbing.</text>
+</svg>
